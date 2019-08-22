@@ -21,6 +21,13 @@ public class Palindrome {
      * <p>Результат: true</p>
      */
     public boolean isPalindrome(String text) {
-        return false;
+        String letterNumber = text.replaceAll("\\W", "").toLowerCase();
+        boolean flagForCheck = true;
+        for (int i = 0; i < letterNumber.length() / 2; i++) {
+            if (letterNumber.charAt(i) != letterNumber.charAt(letterNumber.length() - 1 - i)) {
+                flagForCheck = false;
+            }
+        }
+        return flagForCheck;
     }
 }
