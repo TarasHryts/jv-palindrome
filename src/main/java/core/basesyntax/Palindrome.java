@@ -22,12 +22,12 @@ public class Palindrome {
      */
     public boolean isPalindrome(String text) {
         String letterNumber = text.replaceAll("\\W", "").toLowerCase();
-        boolean flagForCheck = true;
+        boolean flagCheck = true;
         for (int i = 0; i < letterNumber.length() / 2; i++) {
             if (letterNumber.charAt(i) != letterNumber.charAt(letterNumber.length() - 1 - i)) {
-                flagForCheck = false;
+                flagCheck = false;
             }
         }
-        return flagForCheck;
+        return flagCheck;
     }
 }
