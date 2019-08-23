@@ -24,9 +24,8 @@ public class Palindrome {
         String letterNumber = text.replaceAll("\\W", "").toLowerCase();
         boolean flagCheck = true;
         for (int i = 0; i < letterNumber.length() / 2; i++) {
-            if (letterNumber.charAt(i) != letterNumber.charAt(letterNumber.length() - 1 - i)) {
-                flagCheck = false;
-            }
+            flagCheck = letterNumber.charAt(i) == letterNumber
+                    .charAt(letterNumber.length() - 1 - i);
         }
         return flagCheck;
     }
